@@ -13,3 +13,6 @@ call actions#AddAction('scala current file', {'action': funcref#Function('action
 " that way by default
 call actions#AddAction('scala run compiled current file', {'action': funcref#Function('actions#CompileRHSSimple',
   \ {'args': [ [], ["scala", funcref#Function("return matchstr(filter(getline(0,line('$')),'v:val=~ '.string('^\\s*object '))[0],'object \\zs\\S*\\ze')")] ]})})
+
+" TODO write an interface for maven search?
+command ScalaVersions exec "sp | new | r! curl -q 'http://nexus.scala-tools.org/service/local/data_index?_dc=1276701638718&from=0&count=50&q=scala-lib' 2>/dev/null | sed -n 's@\\s*<version>\\([^<]*\\)</version>.*@\\1@p' | sort"

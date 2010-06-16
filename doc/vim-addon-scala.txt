@@ -1,0 +1,7 @@
+tips:
+
+Scala versions:
+http://nexus.scala-tools.org/index.html#nexus-search;quick~html
+
+find maven repositories 
+http://mvnbrowser.com/artifacts-search.html?search=htmlunit
