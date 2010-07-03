@@ -5,3 +5,15 @@ http://nexus.scala-tools.org/index.html#nexus-search;quick~html
 
 find maven repositories 
 http://mvnbrowser.com/artifacts-search.html?search=htmlunit
+
+
+TODO:
+  if a Main object is within a package the package path is not passed to scala.
+  Example:
+
+  package Foo.Bar
+
+  object Main [...]
+
+  should be:
+    scala Foo.Bar.Main
