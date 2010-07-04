@@ -8,6 +8,12 @@ http://mvnbrowser.com/artifacts-search.html?search=htmlunit
 
 
 TODO:
+
+-
+  add snippets ?
+  http://code.google.com/p/yasnippet/source/browse/#svn/trunk/snippets/scala-mode
+
+-
   if a Main object is within a package the package path is not passed to scala.
   Example:
 
