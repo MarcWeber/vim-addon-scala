@@ -36,3 +36,15 @@ fun! vim_addon_scala#CompileRHS(...)
   endif
 
 endfun
+
+" returns "" if no package line is found
+fun! vim_addon_scala#PackageName(append)
+  let lines_with_package = filter(getline(1,line('$')),'v:val =~ '.string('^\s*package\>'))
+  if len(lines_with_package) > 1
+    throw "multiple lines containing '^ package'"
+  elseif len(lines_with_package) == 1
+    return matchstr(lines_with_package[0],'^\s*package\s*\zs\<[^ \n\r\t]*\ze').a:append
+  else
+    return ""
+  endif
+endf
