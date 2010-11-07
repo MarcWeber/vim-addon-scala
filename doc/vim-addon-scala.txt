@@ -1,3 +1,17 @@
+What does this plugin provide
+================================
+- upstream of scala (syntax/scala.vim)
+- compilation actions for scala
+  add snippets ?
+  http://code.google.com/p/yasnippet/source/browse/#svn/trunk/snippets/scala-mode
+
+- ctag example configuration file
+
+
+
+================================
+TODO: tidy this documentation up:
+
 tips:
 
 Scala versions:
